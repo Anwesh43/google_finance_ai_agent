@@ -2620,6 +2620,20 @@ doc = ["reno", "sphinx"]
 test = ["pytest", "tornado (>=4.5)", "typeguard"]
 
 [[package]]
+name = "terminaltexteffects"
+version = "0.15.0"
+description = "TerminalTextEffects (TTE) is a terminal visual effects engine."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "terminaltexteffects-0.15.0-py3-none-any.whl", hash = "sha256:5503250dacae9a3c17e22b0010b2f5fa10332124019f485d517e0c9ebc51aa47"},
+    {file = "terminaltexteffects-0.15.0.tar.gz", hash = "sha256:f4b31c86bfa943d5bf3b2c5ecbfaea0de65ed4a951028c40f8e4cb54efd06439"},
+]
+
+[package.extras]
+docs = ["mkdocs (>=1.6.1)", "mkdocs-material (>=9.6.22)", "mkdocstrings-python (>=1.11.1)", "pymdown-extensions (>=10.15)"]
+
+[[package]]
 name = "tiktoken"
 version = "0.14.0"
 description = "tiktoken is a fast BPE tokeniser for use with OpenAI's models"
@@ -3034,4 +3048,4 @@ dev = ["pytest", "setuptools"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.14"
-content-hash = "440344bfc10869d8da7a247871a059c86607f3a4c177c622b6f193924ae1f070"
+content-hash = "27aab961fbc576fe1e6729bed0a75ec12b4c76f9d9604934422911913c15dfab"

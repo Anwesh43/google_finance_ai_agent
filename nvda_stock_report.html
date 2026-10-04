@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NVIDIA (NVDA) Stock Report</title>
+<style>
+  :root{
+    --bg:#0b1020; --card:#111a33; --muted:#9aa7c7; --text:#e9eeff;
+    --accent:#7c5cff; --accent2:#2dd4bf; --danger:#fb7185; --grid:rgba(255,255,255,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:radial-gradient(1200px 800px at 20% 10%, rgba(124,92,255,.28), transparent 60%), radial-gradient(1000px 700px at 80% 20%, rgba(45,212,191,.18), transparent 60%), var(--bg); color:var(--text);}
+  .wrap{max-width:1100px;margin:32px auto;padding:0 18px 40px;}
+  header{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+  .title{display:flex;flex-direction:column;gap:6px}
+  h1{font-size:28px;line-height:1.15;margin:0}
+  .sub{color:var(--muted);font-size:14px}
+  .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .pill{padding:8px 10px;border:1px solid var(--grid);border-radius:999px;background:rgba(255,255,255,.03);color:var(--muted);font-size:12px}
+  .pill b{color:var(--text);font-weight:600}
+  .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-top:16px}
+  @media (max-width:920px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--grid);border-radius:18px;padding:16px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+  .card h2{margin:0 0 10px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .kpi{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap}
+  .price{font-size:40px;font-weight:750;letter-spacing:-.02em}
+  .chg{font-size:14px;font-weight:650;padding:6px 10px;border-radius:999px;border:1px solid var(--grid)}
+  .up{color:#86efac;background:rgba(34,197,94,.12)}
+  .down{color:#fecaca;background:rgba(244,63,94,.12)}
+  .mini{color:var(--muted);font-size:12px;margin-top:6px}
+  table{width:100%;border-collapse:separate;border-spacing:0 10px}
+  th{color:var(--muted);font-size:12px;font-weight:600;text-align:left}
+  td{padding:10px 12px;background:rgba(255,255,255,.03);border-top:1px solid var(--grid);border-bottom:1px solid var(--grid)}
+  td:first-child{border-left:1px solid var(--grid);border-top-left-radius:12px;border-bottom-left-radius:12px;color:var(--muted)}
+  td:last-child{border-right:1px solid var(--grid);border-top-right-radius:12px;border-bottom-right-radius:12px;font-weight:650}
+  .chartWrap{padding:10px 10px 0}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:12px;margin-top:10px}
+  .dot{width:10px;height:10px;border-radius:999px;display:inline-block;margin-right:6px}
+  .footer{margin-top:16px;color:var(--muted);font-size:12px}
+  a{color:var(--accent2)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>NVIDIA Corporation (NVDA) — Stock Details</h1>
+        <div class="sub">Exchange: NASDAQ · Currency: USD · Snapshot time: Oct 2, 7:59 PM EDT (after-hours shown below)</div>
+        <div class="pillrow">
+          <div class="pill"><b>Last close</b> 233.95</div>
+          <div class="pill"><b>After hours</b> 234.22 ( +0.27 / +0.12% )</div>
+          <div class="pill"><b>Day range</b> 233.60 – 237.88</div>
+          <div class="pill"><b>52W range</b> 164.27 – 237.88</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Price overview</h2>
+        <div class="kpi">
+          <div>
+            <div class="price">$233.95</div>
+            <div class="mini">Today: <span class="chg up">Up +1.34%</span></div>
+          </div>
+        </div>
+
+        <div class="chartWrap">
+          <canvas id="priceChart" height="140"></canvas>
+          <div class="legend">
+            <span><span class="dot" style="background:var(--accent)"></span>Close price (1M)</span>
+            <span><span class="dot" style="background:var(--accent2)"></span>Volume (scaled)</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>Key stats</h2>
+        <table aria-label="Key statistics">
+          <thead>
+            <tr><th>Metric</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Open</td><td>$236.06</td></tr>
+            <tr><td>High</td><td>$237.88</td></tr>
+            <tr><td>Low</td><td>$233.60</td></tr>
+            <tr><td>Market cap</td><td>$5.64T</td></tr>
+            <tr><td>P/E ratio</td><td>29.57</td></tr>
+            <tr><td>Dividend (yield)</td><td>0.43</td></tr>
+            <tr><td>Quarterly dividend amount</td><td>0.25</td></tr>
+            <tr><td>52-week high</td><td>$237.88</td></tr>
+            <tr><td>52-week low</td><td>$164.27</td></tr>
+          </tbody>
+        </table>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Recent closes (1M)</h2>
+      <table aria-label="Recent closes">
+        <thead>
+          <tr>
+            <th style="width:28%">Date</th>
+            <th style="width:18%">Close</th>
+            <th style="width:24%">Volume</th>
+          </tr>
+        </thead>
+        <tbody id="recentRows"></tbody>
+      </table>
+    </section>
+
+    <div class="footer">
+      Data shown is based on the retrieved market snapshot and 1-month historical closes/volume.
+    </div>
+  </div>
+
+<script>
+  const history = [{"price":230.36,"currency":"USD","date":"Sep 04 2026, 04:00 PM UTC-04:00","volume":135352420},{"price":225.73,"currency":"USD","date":"Sep 08 2026, 04:00 PM UTC-04:00","volume":122965555},{"price":223.67,"currency":"USD","date":"Sep 09 2026, 04:00 PM UTC-04:00","volume":82955479},{"price":218.36,"currency":"USD","date":"Sep 10 2026, 04:00 PM UTC-04:00","volume":105768001},{"price":218.29,"currency":"USD","date":"Sep 11 2026, 04:00 PM UTC-04:00","volume":89060140},{"price":210.96,"currency":"USD","date":"Sep 14 2026, 04:00 PM UTC-04:00","volume":132267245},{"price":212.17,"currency":"USD","date":"Sep 15 2026, 04:00 PM UTC-04:00","volume":88059658},{"price":213.9,"currency":"USD","date":"Sep 16 2026, 04:00 PM UTC-04:00","volume":96563590},{"price":219.34,"currency":"USD","date":"Sep 17 2026, 04:00 PM UTC-04:00","volume":94191264},{"price":222.27,"currency":"USD","date":"Sep 18 2026, 04:00 PM UTC-04:00","volume":190287429},{"price":227.38,"currency":"USD","date":"Sep 21 2026, 04:00 PM UTC-04:00","volume":109806068},{"price":228.87,"currency":"USD","date":"Sep 22 2026, 04:00 PM UTC-04:00","volume":95746745},{"price":225.51,"currency":"USD","date":"Sep 23 2026, 04:00 PM UTC-04:00","volume":89547291},{"price":224.58,"currency":"USD","date":"Sep 24 2026, 04:00 PM UTC-04:00","volume":77469856},{"price":225.07,"currency":"USD","date":"Sep 25 2026, 04:00 PM UTC-04:00","volume":89947713},{"price":228.86,"currency":"USD","date":"Sep 28 2026, 04:00 PM UTC-04:00","volume":142344322},{"price":227.21,"currency":"USD","date":"Sep 29 2026, 04:00 PM UTC-04:00","volume":101494933},{"price":228.38,"currency":"USD","date":"Sep 30 2026, 04:00 PM UTC-04:00","volume":121732189},{"price":230.86,"currency":"USD","date":"Oct 01 2026, 04:00 PM UTC-04:00","volume":98591412},{"price":233.95,"currency":"USD","date":"Oct 02 2026, 04:00 PM UTC-04:00","volume":135167818}];
+
+  // Fill recent rows (latest first)
+  const tbody = document.getElementById('recentRows');
+  const lastN = history.slice(-10).reverse();
+  const fmtVol = (v)=> Intl.NumberFormat('en-US').format(v);
+  lastN.forEach(r=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${r.date}</td><td>$${r.price.toFixed(2)}</td><td>${fmtVol(r.volume)}</td>`;
+    // style: reuse pill-table look
+    tr.querySelectorAll('td').forEach((td,i)=>{
+      td.style.padding='10px 12px';
+      td.style.background='rgba(255,255,255,.03)';
+      td.style.borderTop='1px solid rgba(255,255,255,.08)';
+      td.style.borderBottom='1px solid rgba(255,255,255,.08)';
+      if(i===0){td.style.borderLeft='1px solid rgba(255,255,255,.08)'; td.style.borderTopLeftRadius='12px'; td.style.borderBottomLeftRadius='12px'; td.style.color='var(--muted)';}
+      if(i===2){td.style.borderRight='1px solid rgba(255,255,255,.08)'; td.style.borderTopRightRadius='12px'; td.style.borderBottomRightRadius='12px'; td.style.fontWeight='650';}
+      if(i===1){td.style.fontWeight='650';}
+    });
+    tbody.appendChild(tr);
+  });
+
+  // Draw simple canvas chart (no external libs)
+  const canvas = document.getElementById('priceChart');
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const cssW = canvas.clientWidth, cssH = canvas.height;
+  canvas.width = cssW * dpr; canvas.height = cssH * dpr; ctx.scale(dpr,dpr);
+
+  const pad = {l:42,r:14,t:12,b:26};
+  const W = cssW, H = cssH;
+  const plotW = W - pad.l - pad.r;
+  const plotH = H - pad.t - pad.b;
+
+  const prices = history.map(d=>d.price);
+  const vols = history.map(d=>d.volume);
+  const minP = Math.min(...prices), maxP = Math.max(...prices);
+  const maxV = Math.max(...vols);
+
+  const x = (i)=> pad.l + (i/(history.length-1))*plotW;
+  const yP = (p)=> pad.t + (1 - (p-minP)/(maxP-minP || 1))*plotH;
+  const yV = (v)=> pad.t + (1 - (v/maxV))*plotH;
+
+  // grid + axes labels
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle = 'rgba(255,255,255,.08)';
+  ctx.lineWidth = 1;
+  const gridLines = 4;
+  for(let g=0; g<=gridLines; g++){
+    const yy = pad.t + (g/gridLines)*plotH;
+    ctx.beginPath(); ctx.moveTo(pad.l, yy); ctx.lineTo(W-pad.r, yy); ctx.stroke();
+  }
+
+  // price line
+  ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  history.forEach((d,i)=>{ const xx=x(i), yy=yP(d.price); if(i===0) ctx.moveTo(xx,yy); else ctx.lineTo(xx,yy); });
+  ctx.stroke();
+
+  // volume line (scaled)
+  ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent2').trim();
+  ctx.globalAlpha = .85;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  history.forEach((d,i)=>{ const xx=x(i), yy=yV(d.volume); if(i===0) ctx.moveTo(xx,yy); else ctx.lineTo(xx,yy); });
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
+  // y-axis labels (min/max)
+  ctx.fillStyle = 'rgba(233,238,255,.85)';
+  ctx.font = '12px ui-sans-serif, system-ui';
+  ctx.textAlign = 'right';
+  ctx.fillText(`$${maxP.toFixed(2)}`, pad.l-8, pad.t+10);
+  ctx.fillText(`$${minP.toFixed(2)}`, pad.l-8, pad.t+plotH);
+
+  // x-axis labels (first/last date)
+  ctx.fillStyle = 'rgba(154,167,199,.9)';
+  ctx.textAlign = 'left';
+  ctx.fillText(history[0].date.split(',')[0], pad.l, H-8);
+  ctx.textAlign = 'right';
+  ctx.fillText(history[history.length-1].date.split(',')[0], W-pad.r, H-8);
+</script>
+</body>
+</html>

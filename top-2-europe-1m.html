@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Top 2 European Stocks/Indices — 1 Month Report</title>
+  <style>
+    :root{
+      --bg:#0b1020;--card:#111a33;--muted:#93a4c7;--text:#e8eeff;
+      --green:#2dd4bf;--red:#fb7185;--accent:#60a5fa;--border:rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+    body{margin:0;background:radial-gradient(1200px 600px at 20% 0%, rgba(96,165,250,.25), transparent 60%),
+                     radial-gradient(1200px 600px at 90% 20%, rgba(45,212,191,.18), transparent 55%),
+                     var(--bg);color:var(--text);}
+    .wrap{max-width:1100px;margin:40px auto;padding:0 18px;}
+    header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+    h1{margin:0;font-size:22px;letter-spacing:.2px;}
+    .sub{color:var(--muted);font-size:13px;margin-top:6px;}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--border);
+      background:rgba(255,255,255,.03);border-radius:12px;color:var(--muted);font-size:12px;}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px;}
+    .card{grid-column:span 6;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.35);
+      backdrop-filter: blur(6px);
+    }
+    .card h2{margin:0 0 4px 0;font-size:16px;}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin-bottom:12px;}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0 10px 0;}
+    .kpi{padding:10px;border:1px solid var(--border);border-radius:12px;background:rgba(17,26,51,.55);}
+    .kpi .label{color:var(--muted);font-size:11px;}
+    .kpi .value{margin-top:6px;font-size:15px;font-weight:650;}
+    .pos{color:var(--green);} .neg{color:var(--red);} .neu{color:var(--accent);}
+
+    .spark{width:100%;height:92px;display:block;margin-top:8px;}
+    .axislabel{fill:rgba(147,164,199,.85);font-size:10px;}
+
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:12px;
+      border:1px solid var(--border);margin-top:12px;}
+    thead th{font-size:11px;letter-spacing:.2px;text-transform:uppercase;color:var(--muted);
+      background:rgba(255,255,255,.03);padding:10px;text-align:left;border-bottom:1px solid var(--border);}
+    tbody td{padding:10px;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px;color:rgba(232,238,255,.92);}
+    tbody tr:last-child td{border-bottom:none;}
+    .foot{margin-top:16px;color:var(--muted);font-size:12px;line-height:1.35;}
+
+    @media (max-width: 900px){
+      .card{grid-column:span 12;}
+      .kpis{grid-template-columns:repeat(2,1fr);}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Top 2 European trending markets — last 1 month</h1>
+      <div class="sub">Based on trending Europe list. Instruments returned are indices (not single-company equities).</div>
+    </div>
+    <div class="badge">
+      <span>Duration:</span><strong style="color:var(--text)">1M</strong>
+      <span style="opacity:.7">•</span>
+      <span>As of:</span><strong style="color:var(--text)">Oct 02 2026</strong>
+    </div>
+  </header>
+
+  <section class="grid">
+    
+    <article class="card">
+      <h2>DAX <span style="color:var(--muted);font-weight:500">(DAX:INDEXDB)</span></h2>
+      <div class="meta">
+        <span>Start: <strong style="color:var(--text)">26046.40</strong></span>
+        <span>End: <strong style="color:var(--text)">25231.20</strong></span>
+        <span>Points: <strong style="color:var(--text)">21</strong></span>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><div class="label">1M Change</div><div class="value neg">-815.20</div></div>
+        <div class="kpi"><div class="label">1M Return</div><div class="value neg">-3.13%</div></div>
+        <div class="kpi"><div class="label">1M High</div><div class="value neu">26046.40</div></div>
+        <div class="kpi"><div class="label">1M Low</div><div class="value neu">24939.35</div></div>
+      </div>
+
+      <svg class="spark" viewBox="0 0 520 92" preserveAspectRatio="none" aria-label="DAX sparkline">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(96,165,250,.55)"/>
+            <stop offset="100%" stop-color="rgba(96,165,250,0)"/>
+          </linearGradient>
+        </defs>
+        <path d="M 0.00 0.00 L 0.00 0.00 L 0.00 0.00" fill="none"/>
+        <path d="M 0 10.00 L 26 13.31 L 52 13.21 L 78 49.00 L 104 66.86 L 130 49.65 L 156 60.24 L 182 63.44 L 208 52.20 L 234 37.36 L 260 71.56 L 286 49.11 L 312 48.79 L 338 62.72 L 364 74.66 L 390 62.91 L 416 65.75 L 442 63.69 L 468 80.23 L 494 101.73 L 520 77.59" fill="none" stroke="rgba(96,165,250,.95)" stroke-width="2.2"/>
+        <path d="M 0 92 L 0 10.00 L 26 13.31 L 52 13.21 L 78 49.00 L 104 66.86 L 130 49.65 L 156 60.24 L 182 63.44 L 208 52.20 L 234 37.36 L 260 71.56 L 286 49.11 L 312 48.79 L 338 62.72 L 364 74.66 L 390 62.91 L 416 65.75 L 442 63.69 L 468 80.23 L 494 101.73 L 520 77.59 L 520 92 Z" fill="url(#g1)" opacity=".8"/>
+        <text x="8" y="84" class="axislabel">Low: 24939.35</text>
+        <text x="360" y="16" class="axislabel">High: 26046.40</text>
+      </svg>
+
+      <table>
+        <thead><tr><th>Date</th><th>Close</th></tr></thead>
+        <tbody>
+          <tr><td>Sep 04 2026</td><td>26046.40</td></tr>
+          <tr><td>Sep 07 2026</td><td>26006.53</td></tr>
+          <tr><td>Sep 08 2026</td><td>26007.63</td></tr>
+          <tr><td>Sep 09 2026</td><td>25576.45</td></tr>
+          <tr><td>Sep 10 2026</td><td>25361.15</td></tr>
+          <tr><td>Sep 11 2026</td><td>25568.56</td></tr>
+          <tr><td>Sep 14 2026</td><td>25440.81</td></tr>
+          <tr><td>Sep 15 2026</td><td>25402.28</td></tr>
+          <tr><td>Sep 16 2026</td><td>25537.75</td></tr>
+          <tr><td>Sep 17 2026</td><td>25716.71</td></tr>
+        </tbody>
+      </table>
+      <div class="foot">Table shows first 10 points from the 1M series (21 total) to keep the report compact.</div>
+    </article>
+
+    <article class="card">
+      <h2>FTSE 100 <span style="color:var(--muted);font-weight:500">(UKX:INDEXFTSE)</span></h2>
+      <div class="meta">
+        <span>Start: <strong style="color:var(--text)">10831.09</strong></span>
+        <span>End: <strong style="color:var(--text)">10461.95</strong></span>
+        <span>Points: <strong style="color:var(--text)">22</strong></span>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><div class="label">1M Change</div><div class="value neg">-369.14</div></div>
+        <div class="kpi"><div class="label">1M Return</div><div class="value neg">-3.41%</div></div>
+        <div class="kpi"><div class="label">1M High</div><div class="value neu">10831.09</div></div>
+        <div class="kpi"><div class="label">1M Low</div><div class="value neu">10428.27</div></div>
+      </div>
+
+      <svg class="spark" viewBox="0 0 520 92" preserveAspectRatio="none" aria-label="FTSE 100 sparkline">
+        <defs>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(45,212,191,.55)"/>
+            <stop offset="100%" stop-color="rgba(45,212,191,0)"/>
+          </linearGradient>
+        </defs>
+        <path d="M 0 11.99 L 24.76 12.87 L 49.52 13.90 L 74.29 27.83 L 99.05 33.86 L 123.81 29.76 L 148.57 25.12 L 173.33 28.99 L 198.10 26.01 L 222.86 13.44 L 247.62 28.89 L 272.38 21.03 L 297.14 24.05 L 321.90 24.35 L 346.67 26.83 L 371.43 25.33 L 396.19 26.35 L 420.95 31.10 L 445.71 34.12 L 470.48 51.62 L 495.24 48.30 L 520 48.30" fill="none" stroke="rgba(45,212,191,.95)" stroke-width="2.2"/>
+        <path d="M 0 92 L 0 11.99 L 24.76 12.87 L 49.52 13.90 L 74.29 27.83 L 99.05 33.86 L 123.81 29.76 L 148.57 25.12 L 173.33 28.99 L 198.10 26.01 L 222.86 13.44 L 247.62 28.89 L 272.38 21.03 L 297.14 24.05 L 321.90 24.35 L 346.67 26.83 L 371.43 25.33 L 396.19 26.35 L 420.95 31.10 L 445.71 34.12 L 470.48 51.62 L 495.24 48.30 L 520 48.30 L 520 92 Z" fill="url(#g2)" opacity=".8"/>
+        <text x="8" y="84" class="axislabel">Low: 10428.27</text>
+        <text x="360" y="16" class="axislabel">High: 10831.09</text>
+      </svg>
+
+      <table>
+        <thead><tr><th>Date</th><th>Close</th></tr></thead>
+        <tbody>
+          <tr><td>Sep 04 2026</td><td>10831.09</td></tr>
+          <tr><td>Sep 07 2026</td><td>10822.13</td></tr>
+          <tr><td>Sep 08 2026</td><td>10811.66</td></tr>
+          <tr><td>Sep 09 2026</td><td>10670.06</td></tr>
+          <tr><td>Sep 10 2026</td><td>10608.92</td></tr>
+          <tr><td>Sep 11 2026</td><td>10650.44</td></tr>
+          <tr><td>Sep 14 2026</td><td>10697.57</td></tr>
+          <tr><td>Sep 15 2026</td><td>10658.13</td></tr>
+          <tr><td>Sep 16 2026</td><td>10688.47</td></tr>
+          <tr><td>Sep 17 2026</td><td>10816.14</td></tr>
+        </tbody>
+      </table>
+      <div class="foot">Table shows first 10 points from the 1M series (22 total) to keep the report compact.</div>
+    </article>
+
+  </section>
+
+  <div class="foot">
+    <strong>Notes:</strong> “Top 2 European stocks” interpreted as the top 2 <em>trending European instruments</em> returned by the data source (DAX and FTSE 100 indices). If you want top 2 European <em>company equities</em> instead, tell me the country/market (e.g., LSE, XETRA, Euronext) or a watchlist and I’ll generate the same 1M report.
+  </div>
+</div>
+</body>
+</html>

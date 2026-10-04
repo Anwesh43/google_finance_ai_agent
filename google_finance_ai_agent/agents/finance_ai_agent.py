@@ -2,6 +2,9 @@ from tools.serp_finance_tools import getStockDetails, getTrendingStocks, searchC
 from prompts.finance_system_prompt import SYSTEM_PROMPT
 from pydantic_ai import Agent 
 from dotenv import load_dotenv 
+from services.printer_service import PrinterService 
+
+ps = PrinterService(bucket=200)
 
 load_dotenv()
 
@@ -14,4 +17,5 @@ agent = Agent(
 async def analyseUSStocks(prompt : str):
     async with agent.run_stream(prompt) as result:
         async for token in result.stream_text(delta=True):
-            print(token, end = '')
+            ps.addText(token)
+    ps.display()

@@ -17,4 +17,5 @@ YTD - Year to Date
 5Y - 5 Years
 MAX - Maximum
 ```
+please display some streaming infromation to user.
 """
