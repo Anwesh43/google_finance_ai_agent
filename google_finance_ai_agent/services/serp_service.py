@@ -48,7 +48,7 @@ class SerpService:
                 "window": duration
             }
             response = self.client.getCall("search", qpParams = qpParmas)
-            return response["graph"] 
+            return response["graph"]
         except Exception as e:
             return self._handleError(e)
 
